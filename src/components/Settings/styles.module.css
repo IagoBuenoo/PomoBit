@@ -1,0 +1,43 @@
+.container {
+  margin: 6.4rem auto;
+}
+
+.settings {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  gap: 1.2em;
+  transition: all 0.3s ease-in-out;
+}
+
+.settings h2 {
+  font-size: 3.2rem;
+}
+
+.settings p {
+  font-size: 1.8rem;
+  white-space: nowrap;
+  margin: 3.2rem auto;
+}
+
+.save {
+  font-family: inherit;
+  font-size: 1.8rem;
+  background-color: var(--primary);
+  color: inherit;
+  padding: 1.2rem 3.6rem;
+  border: none;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin: 3.2rem auto;
+}
+
+.save:hover {
+  filter: brightness(80%);
+}

@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Press Start 2P', system-ui;
+  font-size: 1.6rem;
+  background: var(--background);
+  color: var(--text-over-primary);
+  text-align: center;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+@media (max-width: 912px) {
+  html {
+    font-size: 56.25%;
+  }
+}

@@ -1,0 +1,42 @@
+:root {
+  --background: #2b0a4a;
+
+  --primary: #7209b7;
+  --primary-focus: #560bad;
+
+  --link-color: #c77dff;
+
+  --success: #4cc9f0;
+  --warning: #ffb703;
+  --error: #ef233c;
+  --info: #4895ef;
+
+  --text-over-primary: #ffffff;
+
+  --disabled: #3b1c5c;
+  --text-disabled: #a06cd5;
+
+  --border: #2a003f;
+}
+
+/* Light theme */
+:root[data-theme='light'] {
+  --background: #f3e8ff;
+
+  --primary: #e0568a;
+  --primary-focus: #c23d74;
+
+  --link-color: #b24c7c;
+
+  --success: #2ec4b6;
+  --warning: #ffb703;
+  --error: #e63946;
+  --info: #3a86ff;
+
+  --text-over-primary: #3a2f3f;
+
+  --disabled: #e4d9f7;
+  --text-disabled: #7b2cbf;
+
+  --border: #3a2f3f;
+}

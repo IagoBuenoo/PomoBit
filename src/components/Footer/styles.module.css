@@ -1,0 +1,45 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 2.4rem auto;
+  white-space: nowrap;
+  font-size: 1.2rem;
+  gap: 1.2rem;
+}
+
+.footer a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.themeButton {
+  position: absolute;
+  right: 1.5%;
+  top: 1.5%;
+  font-family: inherit;
+  font-size: 1.8rem;
+  color: var(--text-default);
+  background-color: var(--primary);
+  padding: 1.2rem;
+  border: none;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.themeButton:hover {
+  filter: brightness(80%);
+}
+
+@media (max-width: 1000px) {
+  .themeButton {
+    right: 2.5%;
+    top: 7%;
+  }
+}

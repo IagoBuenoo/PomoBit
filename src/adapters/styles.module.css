@@ -1,0 +1,17 @@
+.pixelatedMsg {
+  font-family: inherit;
+  font-size: 1rem;
+
+  background: var(--background);
+  color: var(--text-over-primary);
+
+  border-radius: 0;
+
+  padding: 1.2rem;
+
+  border: 3px solid var(--border);
+  box-shadow: 3px 3px 0 var(--border);
+
+  image-rendering: pixelated;
+  line-height: 1.6rem;
+}
