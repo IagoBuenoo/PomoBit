@@ -17,7 +17,6 @@ export type TaskActionModel =
       type: typeof TaskActionTypes.START_TASK;
       payload: {
         secondsRemaining: number;
-        formattedSecondsRemaining: string;
         task: TaskModel;
       };
     }
@@ -25,7 +24,6 @@ export type TaskActionModel =
       type: typeof TaskActionTypes.INTERRUPT_TASK;
       payload: {
         secondsRemaining: number;
-        formattedSecondsRemaining: string;
       };
     }
   | {
@@ -41,7 +39,6 @@ export type TaskActionModel =
       type: typeof TaskActionTypes.CHANGE_MODE;
       payload: {
         secondsRemaining: number;
-        formattedSecondsRemaining: string;
       };
     }
   | {

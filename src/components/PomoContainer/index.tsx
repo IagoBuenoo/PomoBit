@@ -14,6 +14,8 @@ export function PomoContainer() {
 
   const { state, dispatch } = useTaskContext();
 
+  const formattedTime = formatSecondsToMinutes(state.secondsRemaining);
+
   function handleStartOrResumeTask() {
     if (state.activeTask) {
       dispatch({
@@ -40,7 +42,6 @@ export function PomoContainer() {
       type: TaskActionTypes.START_TASK,
       payload: {
         secondsRemaining,
-        formattedSecondsRemaining: formatSecondsToMinutes(secondsRemaining),
         task: newTask,
       },
     });
@@ -58,7 +59,6 @@ export function PomoContainer() {
       type: TaskActionTypes.INTERRUPT_TASK,
       payload: {
         secondsRemaining,
-        formattedSecondsRemaining: formatSecondsToMinutes(secondsRemaining),
       },
     });
   }
@@ -79,7 +79,6 @@ export function PomoContainer() {
       type: TaskActionTypes.CHANGE_MODE,
       payload: {
         secondsRemaining,
-        formattedSecondsRemaining: formatSecondsToMinutes(secondsRemaining),
       },
     });
   }
@@ -106,7 +105,7 @@ export function PomoContainer() {
         ))}
       </div>
 
-      <div className={styles.countdown}>{state.formattedSecondsRemaining}</div>
+      <div className={styles.countdown}>{formattedTime}</div>
 
       {!state.activeTask && (
         <button
