@@ -1,7 +1,7 @@
 import { PomoContainer } from '../../components/PomoContainer';
 import { MainTemplate } from '../../templates/MainTemplate';
 
-export function Home() {
+export function HomePage() {
   return (
     <>
       <MainTemplate>

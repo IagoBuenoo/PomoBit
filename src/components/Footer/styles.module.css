@@ -18,25 +18,6 @@
   text-decoration: underline;
 }
 
-.themeButton {
-  position: absolute;
-  right: 1.5%;
-  top: 1.5%;
-  font-family: inherit;
-  font-size: 1.8rem;
-  color: var(--text-default);
-  background-color: var(--primary);
-  padding: 1.2rem;
-  border: none;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-}
-
-.themeButton:hover {
-  filter: brightness(80%);
-}
-
 @media (max-width: 1000px) {
   .themeButton {
     right: 2.5%;

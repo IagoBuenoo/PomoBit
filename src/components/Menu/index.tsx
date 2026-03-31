@@ -1,5 +1,6 @@
 import styles from './styles.module.css';
 import { useEffect, useState } from 'react';
+import { RouterLink } from '../RouterLink';
 
 type AvailableThemes = 'dark' | 'light';
 
@@ -12,8 +13,8 @@ export function Menu() {
   });
 
   const nextThemeIcon = {
-    dark: <img src='sun.png' alt='' />,
-    light: <img src='moon.png' alt='' />,
+    dark: <img src='/sun.png' alt='' />,
+    light: <img src='/moon.png' alt='' />,
   };
 
   function handleTheme(e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) {
@@ -32,15 +33,30 @@ export function Menu() {
   return (
     <>
       <nav className={styles.menu}>
-        <a href='#' className={styles.menuLink}>
-          <img src='home.png' alt='' />
-        </a>
-        <a href='#' className={styles.menuLink}>
-          <img src='history.png' alt='' />
-        </a>
-        <a href='#' className={styles.menuLink}>
-          <img src='settings.png' alt='' />
-        </a>
+        <RouterLink
+          href='/'
+          className={styles.menuLink}
+          title='Home'
+          aria-label='Home'
+        >
+          <img src='/home.png' alt='' />
+        </RouterLink>
+        <RouterLink
+          href='/history/'
+          className={styles.menuLink}
+          title='History'
+          aria-label='History'
+        >
+          <img src='/history.png' alt='' />
+        </RouterLink>
+        <RouterLink
+          href='/settings/'
+          className={styles.menuLink}
+          title='Settings'
+          aria-label='Settings'
+        >
+          <img src='/settings.png' alt='' />
+        </RouterLink>
         <a
           className={styles.themeButton}
           title='Change Theme'

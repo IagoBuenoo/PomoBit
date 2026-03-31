@@ -11,18 +11,13 @@
   align-items: center;
   justify-content: center;
   text-decoration: none;
-
   background: var(--primary);
   color: inherit;
-
   padding: 1.2rem;
-  border: 3px solid var(--border);
-  box-shadow: 3px 3px 0 var(--border);
-
+  border: 2px solid var(--border);
+  box-shadow: 1.2px 1.2px 0 var(--border);
   cursor: pointer;
-
   border-radius: 0;
-
   transition: background-color 0.1s ease-in-out;
 }
 
@@ -31,7 +26,7 @@
 }
 
 .menuLink:active {
-  transform: translate(3px, 3px);
+  transform: translate(2px, 2px);
   box-shadow: none;
 }
 
@@ -42,17 +37,17 @@
 }
 
 .themeButton {
-  background-color: var(--primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  background: var(--primary);
   color: inherit;
   padding: 1.2rem;
-
-  border: 3px solid var(--border);
-  box-shadow: 3px 3px 0 var(--border);
-
+  border: 2px solid var(--border);
+  box-shadow: 1.2px 1.2px 0 var(--border);
   cursor: pointer;
-
   border-radius: 0;
-
   transition: background-color 0.1s ease-in-out;
 }
 
@@ -61,7 +56,7 @@
 }
 
 .themeButton:active {
-  transform: translate(3px, 3px);
+  transform: translate(2px, 2px);
   box-shadow: none;
 }
 

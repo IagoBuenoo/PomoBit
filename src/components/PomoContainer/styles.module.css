@@ -3,14 +3,14 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 5.6rem auto;
+  margin: auto;
   background: var(--primary);
   width: 64rem;
   max-width: 90%;
   height: 44rem;
   border-radius: 0;
-  border: 3px solid var(--border);
-  box-shadow: 3px 3px 0 var(--border);
+  border: 2px solid var(--border);
+  box-shadow: 2px 2px 0 var(--border);
   transition: all 0.3s ease-in-out;
 }
 
@@ -65,8 +65,8 @@
   color: inherit;
   padding: 1.2rem 3.6rem;
   border-radius: 0;
-  border: 3px solid var(--border);
-  box-shadow: 3px 3px 0 var(--border);
+  border: 2px solid var(--border);
+  box-shadow: 2px 2px 0 var(--border);
   cursor: pointer;
   transition: font-size 0.1s ease-in-out;
 }
@@ -87,7 +87,7 @@
 .pause:active,
 .resume:active,
 .interrupt:active {
-  transform: translate(3px, 3px);
+  transform: translate(2px, 2px);
   box-shadow: none;
 }
 

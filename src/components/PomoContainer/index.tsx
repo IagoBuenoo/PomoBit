@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import styles from './styles.module.css';
 import { useTaskContext } from '../../contexts/TaskContext/useTaskContext';
 import type { TaskModel } from '../../models/TaskModel';
@@ -10,9 +9,9 @@ import { TaskActionTypes } from '../../contexts/TaskContext/taskActions';
 type Mode = 'pomodoro' | 'shortBreak' | 'longBreak';
 
 export function PomoContainer() {
-  const [active, setActive] = useState<Mode>('pomodoro');
-
   const { state, dispatch } = useTaskContext();
+
+  const active = state.currentMode;
 
   const formattedTime = formatSecondsToMinutes(state.secondsRemaining);
 
@@ -26,6 +25,7 @@ export function PomoContainer() {
     }
 
     const duration = state.config[active];
+    const secondsRemaining = duration * 60;
 
     const newTask: TaskModel = {
       id: Date.now().toString(),
@@ -35,8 +35,6 @@ export function PomoContainer() {
       duration,
       type: active,
     };
-
-    const secondsRemaining = duration * 60;
 
     dispatch({
       type: TaskActionTypes.START_TASK,
@@ -70,8 +68,6 @@ export function PomoContainer() {
       return;
     }
 
-    setActive(mode);
-
     const duration = state.config[mode];
     const secondsRemaining = duration * 60;
 
@@ -79,6 +75,7 @@ export function PomoContainer() {
       type: TaskActionTypes.CHANGE_MODE,
       payload: {
         secondsRemaining,
+        mode,
       },
     });
   }

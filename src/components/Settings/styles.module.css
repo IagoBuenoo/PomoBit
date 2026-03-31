@@ -1,5 +1,17 @@
 .container {
-  margin: 6.4rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  background: var(--primary);
+  width: 64rem;
+  max-width: 90%;
+  height: 54rem;
+  border-radius: 0;
+  border: 2px solid var(--border);
+  box-shadow: 2px 2px 0 var(--border);
+  transition: all 0.3s ease-in-out;
 }
 
 .settings {
@@ -7,35 +19,39 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   gap: 1.2em;
   transition: all 0.3s ease-in-out;
 }
 
 .settings h2 {
+  margin: 1.2rem;
+  margin-top: 3.2rem;
   font-size: 3.2rem;
 }
 
 .settings p {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   white-space: nowrap;
-  margin: 3.2rem auto;
+  margin: 1.2rem auto;
 }
 
 .save {
   font-family: inherit;
   font-size: 1.8rem;
-  background-color: var(--primary);
+  background-color: var(--background);
   color: inherit;
   padding: 1.2rem 3.6rem;
-  border: none;
-  border-radius: 0.6rem;
+  border-radius: 0;
+  border: 2px solid var(--border);
+  box-shadow: 1.2px 1.2px 0 var(--border);
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
+  transition: font-size 0.3s ease-in-out;
   margin: 3.2rem auto;
+}
+
+.save:active {
+  transform: translate(2px, 2px);
+  box-shadow: none;
 }
 
 .save:hover {

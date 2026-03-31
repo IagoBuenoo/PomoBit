@@ -43,16 +43,6 @@ export function taskReducer(state: TaskStateModel, action: TaskActionModel) {
         isRunning: true,
       };
 
-    case TaskActionTypes.CHANGE_MODE: {
-      const { secondsRemaining } = action.payload;
-
-      return {
-        ...state,
-        secondsRemaining,
-        isRunning: false,
-      };
-    }
-
     case TaskActionTypes.COUNT_DOWN:
       return {
         ...state,
@@ -60,16 +50,59 @@ export function taskReducer(state: TaskStateModel, action: TaskActionModel) {
       };
 
     case TaskActionTypes.COMPLETE_TASK: {
+      let nextMode = state.currentMode;
+      let completedPomodoros = state.completedPomodoros;
+
+      if (state.currentMode === 'pomodoro') {
+        completedPomodoros += 1;
+
+        if (completedPomodoros % 4 === 0) {
+          nextMode = 'longBreak';
+        } else {
+          nextMode = 'shortBreak';
+        }
+      } else {
+        nextMode = 'pomodoro';
+      }
+
+      const secondsRemaining = state.config[nextMode] * 60;
+
       return {
         ...state,
         activeTask: null,
         isRunning: false,
-        secondsRemaining: 0,
+        secondsRemaining,
+        currentMode: nextMode,
         tasks: state.tasks.map(task =>
           task.id === state.activeTask?.id
             ? { ...task, completeDate: Date.now() }
             : task,
         ),
+      };
+    }
+
+    case TaskActionTypes.CHANGE_MODE: {
+      const { secondsRemaining, mode } = action.payload;
+
+      return {
+        ...state,
+        secondsRemaining,
+        isRunning: false,
+        currentMode: mode,
+      };
+    }
+
+    case TaskActionTypes.SAVE_SETTINGS: {
+      const newConfig = action.payload;
+
+      const updatedSecondsRemaining = state.activeTask
+        ? state.secondsRemaining
+        : newConfig[state.currentMode] * 60;
+
+      return {
+        ...state,
+        secondsRemaining: updatedSecondsRemaining,
+        config: action.payload,
       };
     }
 

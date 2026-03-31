@@ -2,12 +2,14 @@ import type { TaskStateModel } from '../../models/TaskStateModel';
 
 export const initialTaskState: TaskStateModel = {
   tasks: [],
-  secondsRemaining: 0,
   activeTask: null,
   isRunning: false,
+  currentMode: 'pomodoro',
+  completedPomodoros: 0,
   config: {
-    pomodoro: 1,
-    shortBreak: 1,
-    longBreak: 1,
+    pomodoro: 25,
+    shortBreak: 5,
+    longBreak: 15,
   },
+  secondsRemaining: 0,
 };

@@ -1,9 +1,10 @@
-import { toast } from 'react-toastify';
-
 import styles from './styles.module.css';
 
+import { toast } from 'react-toastify';
+
 const pixel = {
-  className: styles.pixelatedMsg,
+  className: styles.toastMessage,
+  progressClassName: styles.toastProgress,
 };
 
 export const showMessage = {

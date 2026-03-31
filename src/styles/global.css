@@ -21,6 +21,12 @@ body {
   height: 100%;
 }
 
+:global(.Toastify__progress-bar--wrp) {
+  margin: 0;
+  padding: 0;
+  bottom: 0;
+}
+
 @media (max-width: 912px) {
   html {
     font-size: 56.25%;
