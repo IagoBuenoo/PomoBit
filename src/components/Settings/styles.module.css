@@ -38,7 +38,7 @@
 .save {
   font-family: inherit;
   font-size: 1.8rem;
-  background-color: var(--background);
+  background-color: var(--button-color);
   color: inherit;
   padding: 1.2rem 3.6rem;
   border-radius: 0;

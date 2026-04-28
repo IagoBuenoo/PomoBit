@@ -9,6 +9,10 @@
   gap: 1.2rem;
 }
 
+.footer p {
+  color: var(--text-over-background);
+}
+
 .footer a {
   color: var(--link-color);
   text-decoration: none;

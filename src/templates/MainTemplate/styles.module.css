@@ -9,4 +9,18 @@
 .content {
   flex: 1;
   margin: 1.2rem auto;
+  width: 100%;
+  max-width: 100rem;
+}
+
+.toastContainer {
+  top: 22rem;
+  transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 912px) {
+  .toastContainer {
+    top: 30rem;
+    font-size: 62.5%;
+  }
 }

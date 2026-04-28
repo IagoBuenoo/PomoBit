@@ -7,7 +7,7 @@
   padding: 0 1.2rem 1.2rem 1.2rem;
   width: 100%;
   max-width: 86rem;
-  border-bottom: 0.2rem solid var(--text-over-primary);
+  border-bottom: 0.2rem solid var(--text-over-background);
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
@@ -22,7 +22,7 @@
 }
 
 .logo:visited {
-  color: var(--text-over-primary);
+  color: var(--text-over-background);
 }
 
 .logo img {
@@ -55,7 +55,7 @@
 }
 
 .heading-button:hover {
-  filter: brightness(80%);
+  background: var(--primary-focus);
 }
 
 @media (max-width: 912px) {

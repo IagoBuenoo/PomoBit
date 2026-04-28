@@ -1,4 +1,5 @@
 import type { TaskStateModel } from '../../models/TaskStateModel';
+import { initialTaskState } from './initialTaskState';
 
 import { TaskActionTypes, type TaskActionModel } from './taskActions';
 
@@ -104,6 +105,10 @@ export function taskReducer(state: TaskStateModel, action: TaskActionModel) {
         secondsRemaining: updatedSecondsRemaining,
         config: action.payload,
       };
+    }
+
+    case TaskActionTypes.RESET_STATE: {
+      return { ...initialTaskState };
     }
 
     default:

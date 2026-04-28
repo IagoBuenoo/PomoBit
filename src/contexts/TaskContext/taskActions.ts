@@ -9,6 +9,7 @@ export const TaskActionTypes = {
   COMPLETE_TASK: 'COMPLETE_TASK',
   CHANGE_MODE: 'CHANGE_MODE',
   SAVE_SETTINGS: 'SAVE_SETTINGS',
+  RESET_STATE: 'RESET_STATE',
 } as const;
 
 export type TaskActionTypes = keyof typeof TaskActionTypes;
@@ -57,4 +58,7 @@ export type TaskActionModel =
         shortBreak: number;
         longBreak: number;
       };
+    }
+  | {
+      type: typeof TaskActionTypes.RESET_STATE;
     };

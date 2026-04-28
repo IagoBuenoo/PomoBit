@@ -3,11 +3,11 @@
 }
 
 .input {
-  background-color: var(--background);
+  background: var(--text-over-primary);
+  color: var(--text-over-background);
   border-radius: 0;
   border: 2px solid var(--border);
   box-shadow: 1.2px 1.2px 0 var(--border);
-  color: var(--text-default);
   font-size: 1.2rem;
   font-family: inherit;
   padding: 0.8rem;

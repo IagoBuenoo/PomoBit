@@ -3,7 +3,8 @@
   align-items: center;
   justify-content: center;
   gap: 1.6rem;
-  margin: 5.6rem auto;
+  margin-bottom: 9.2rem;
+  margin-top: 5.6rem;
 }
 
 .menuLink {
@@ -52,7 +53,7 @@
 }
 
 .themeButton:hover {
-  filter: brightness(80%);
+  background: var(--primary-focus);
 }
 
 .themeButton:active {
@@ -61,8 +62,7 @@
 }
 
 @media (max-width: 912px) {
-  .menuLink,
-  .themeButton {
-    padding: 0.8rem;
+  .menu {
+    margin: 12rem auto;
   }
 }

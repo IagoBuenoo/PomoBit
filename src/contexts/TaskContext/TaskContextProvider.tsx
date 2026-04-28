@@ -82,7 +82,7 @@ export function TaskContextProvider({ children }: TaskContextProviderProps) {
       isRunning: state.isRunning,
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [state.activeTask, state.isRunning]);
+  }, [state]);
 
   useEffect(() => {
     if (state.activeTask) {

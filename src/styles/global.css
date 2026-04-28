@@ -21,14 +21,24 @@ body {
   height: 100%;
 }
 
-:global(.Toastify__progress-bar--wrp) {
-  margin: 0;
-  padding: 0;
-  bottom: 0;
-}
-
 @media (max-width: 912px) {
   html {
     font-size: 56.25%;
   }
+}
+
+.Toastify__toast,
+.Toastify__toast-body {
+  font-family: 'Press Start 2P', system-ui !important;
+}
+
+.Toastify__toast {
+  box-shadow: none !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+}
+
+.Toastify__toast-body {
+  padding: 0 !important;
+  margin: 0 !important;
 }
