@@ -22,6 +22,7 @@
 }
 
 .genericHtml h1 {
+  color: var(--text-over-background);
   font-size: 3.2rem;
   margin-bottom: 1.6rem;
   align-self: center;
@@ -29,16 +30,19 @@
 }
 
 .genericHtml h2 {
+  color: var(--text-over-background);
   font-size: 2.4rem;
   margin-bottom: 1.2rem;
 }
 
 .genericHtml h3 {
+  color: var(--text-over-background);
   font-size: 2rem;
   margin-bottom: 1rem;
 }
 
 .genericHtml p {
+  color: var(--text-over-background);
   font-size: 1.6rem;
   line-height: 1.6;
   margin-bottom: 1.6rem;
@@ -59,6 +63,7 @@
 }
 
 .genericHtml li {
+  color: var(--text-over-background);
   margin-bottom: 0.8rem;
 }
 

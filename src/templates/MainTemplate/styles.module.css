@@ -14,13 +14,12 @@
 }
 
 .toastContainer {
-  top: 22rem;
+  top: 22rem !important;
   transition: all 0.3s ease-in-out;
 }
 
 @media (max-width: 912px) {
   .toastContainer {
-    top: 30rem;
-    font-size: 62.5%;
+    top: 30rem !important;
   }
 }

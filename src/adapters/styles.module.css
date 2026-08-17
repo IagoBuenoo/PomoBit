@@ -1,16 +1,22 @@
 .toastMessage {
   font-family: 'Press Start 2P', system-ui;
-  font-size: 1.2rem !important;
+  font-size: 1.2rem;
 
   background: var(--background) !important;
   color: var(--text-over-background) !important;
 
   border-radius: 0 !important;
 
-  padding: 1.2rem;
+  padding: 1.2rem !important;
 
   border: 2px solid var(--border) !important;
   box-shadow: 2px 2px 0 var(--border) !important;
 
   line-height: 1.6rem;
+}
+
+@media (max-width: 912px) {
+  .toastMessage {
+    font-size: 62.5%;
+  }
 }

@@ -5,9 +5,8 @@ import styles from './styles.module.css';
 import { useTaskContext } from '../../contexts/TaskContext/useTaskContext';
 import { formatDate } from '../../utils/formatDate';
 import { getTaskStatus } from '../../utils/getTaskStatus';
-import { showMessage } from '../../adapters/showMessage';
 import { TaskActionTypes } from '../../contexts/TaskContext/taskActions';
-import { toast } from 'react-toastify';
+import { showMessage } from '../../adapters/showMessage';
 
 export function History() {
   const { state, dispatch } = useTaskContext();
@@ -17,15 +16,8 @@ export function History() {
   const orderedTasks = [...state.tasks].reverse();
 
   function handleResetHistory() {
-    toast.dismiss();
-    showMessage.confirm(
-      'Are you sure you want to delete your history?',
-      confirmation => {
-        if (confirmation) {
-          dispatch({ type: TaskActionTypes.RESET_STATE });
-        }
-      },
-    );
+    showMessage.success('Your history was deleted succesfully');
+    dispatch({ type: TaskActionTypes.RESET_STATE });
   }
 
   return (
