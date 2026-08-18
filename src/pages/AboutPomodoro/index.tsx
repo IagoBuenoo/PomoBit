@@ -90,7 +90,7 @@ export function AboutPomodoro() {
             track your progress over time.
           </p>
 
-          <h2>Why use Chronos Pomodoro?</h2>
+          <h2>Why use Pomodoro?</h2>
           <ul>
             <li>✅ Organize your focus clearly.</li>
             <li>✅ Work and rest in the right balance.</li>

@@ -86,9 +86,9 @@ export function TaskContextProvider({ children }: TaskContextProviderProps) {
 
   useEffect(() => {
     if (state.activeTask) {
-      document.title = `${formattedTime} - PomoBit`;
+      document.title = `${formattedTime} - Pomodoro`;
     } else {
-      document.title = 'PomoBit';
+      document.title = 'Pomodoro';
     }
   }, [formattedTime, state.activeTask]);
 

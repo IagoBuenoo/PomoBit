@@ -4,10 +4,10 @@ import { SettingsPage } from './pages/SettingsPage';
 import { AboutPomodoro } from './pages/AboutPomodoro';
 import { History } from './pages/History';
 import { BrowserRouter, Route, Routes } from 'react-router';
+import { PageNotFound } from './pages/PageNotFound';
 
 import './styles/global.css';
 import './styles/theme.css';
-import { PageNotFound } from './pages/PageNotFound';
 
 export function App() {
   return (
