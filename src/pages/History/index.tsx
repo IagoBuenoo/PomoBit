@@ -24,16 +24,21 @@ export function History() {
     <MainTemplate>
       <div className={styles.container}>
         <div className={styles.historyContainer}>
-          <span className={styles.span}>History</span>
+          <span className={styles.span}>
+            {!hasTasks && <p>You haven't completed any tasks yet.</p>}
+          </span>
           {hasTasks && (
-            <button
-              className={styles.trashButton}
-              aria-label='Delete all history'
-              title='Delete all history'
-              onClick={handleResetHistory}
-            >
-              <TrashIcon />
-            </button>
+            <div className={styles.hasTasks}>
+              <p className={styles.span}>History</p>
+              <button
+                className={styles.trashButton}
+                aria-label='Delete all history'
+                title='Delete all history'
+                onClick={handleResetHistory}
+              >
+                <TrashIcon />
+              </button>
+            </div>
           )}
         </div>
 
@@ -70,8 +75,6 @@ export function History() {
             </table>
           </div>
         )}
-
-        {!hasTasks && <p>You haven't created any tasks yet.</p>}
       </div>
     </MainTemplate>
   );

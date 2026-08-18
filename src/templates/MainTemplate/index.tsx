@@ -14,7 +14,7 @@ type MainTemplateProps = {
 export function MainTemplate({ children }: MainTemplateProps) {
   return (
     <div className={styles.layout}>
-      <ToastContainer className={styles.toastContainer} position='top-center' />
+      <ToastContainer className={styles.toastContainer} position='top-right' />
       <Heading />
       <Menu />
       <main className={styles.content}>{children}</main>

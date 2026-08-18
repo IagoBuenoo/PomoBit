@@ -12,14 +12,3 @@
   width: 100%;
   max-width: 100rem;
 }
-
-.toastContainer {
-  top: 22rem !important;
-  transition: all 0.3s ease-in-out;
-}
-
-@media (max-width: 912px) {
-  .toastContainer {
-    top: 30rem !important;
-  }
-}

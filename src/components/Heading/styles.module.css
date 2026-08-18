@@ -16,58 +16,24 @@
   display: flex;
   align-items: center;
   gap: 0.4rem;
-  transition: font-size 0.3s ease-in-out;
   text-decoration: none;
-  font-size: 2.4rem;
+  font-size: 3.2rem;
+  transition: all 0.3s ease-in-out;
 }
 
 .logo:visited {
   color: var(--text-over-background);
 }
 
-.logo img {
-  width: 3.2rem;
-  height: 3.2rem;
-}
-
-.heading-buttons {
-  display: flex;
-  gap: 1.2rem;
-}
-
-.heading-button {
-  font-family: inherit;
-  font-size: 1.2rem;
-  background-color: var(--primary);
-  color: inherit;
-  padding: 0.8rem;
-  border: 2px solid var(--border);
-  box-shadow: 1.2px 1.2px 0 var(--border);
-  border-radius: 0;
-  cursor: pointer;
-  transition: background-color 0.1s ease-in-out;
-  word-spacing: -0.5em;
-}
-
-.heading-button:active {
-  transform: translate(3px, 3px);
-  box-shadow: none;
-}
-
-.heading-button:hover {
-  background: var(--primary-focus);
-}
-
 @media (max-width: 912px) {
   .heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-bottom: none;
   }
 
   .logo {
-    font-size: 2.4rem;
-  }
-
-  .heading-button {
-    font-size: 1rem;
+    font-size: 3.2rem;
   }
 }

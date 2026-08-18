@@ -1,14 +1,13 @@
 .label {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 
 .input {
   background: var(--text-over-primary);
   color: var(--text-over-background);
-  border-radius: 0;
-  border: 2px solid var(--border);
-  box-shadow: 1.2px 1.2px 0 var(--border);
-  font-size: 1.2rem;
+  border-radius: 0.8rem;
+  border: none;
+  font-size: 1.8rem;
   font-family: inherit;
   padding: 0.8rem;
   text-align: center;

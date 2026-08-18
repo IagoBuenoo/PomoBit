@@ -5,6 +5,7 @@ import { formatSecondsToMinutes } from '../../utils/formatSecondsToMinutes';
 import { showMessage } from '../../adapters/showMessage';
 import { toast } from 'react-toastify';
 import { TaskActionTypes } from '../../contexts/TaskContext/taskActions';
+import { DefaultButton } from '../DefaultButton';
 
 type Mode = 'pomodoro' | 'shortBreak' | 'longBreak';
 
@@ -105,50 +106,46 @@ export function PomoContainer() {
       <div className={styles.countdown}>{formattedTime}</div>
 
       {!state.activeTask && (
-        <button
+        <DefaultButton
           className={styles.start}
           onClick={handleStartOrResumeTask}
           aria-label='Start new task'
           title='Start new task'
-          type='button'
         >
           START
-        </button>
+        </DefaultButton>
       )}
 
       {state.activeTask && state.isRunning && (
         <div className={styles.pauseInterrupt}>
-          <button
+          <DefaultButton
             className={styles.pause}
             onClick={handlePauseTask}
             aria-label='Pause current task'
             title='Pause current task'
-            type='button'
           >
             PAUSE
-          </button>
-          <button
+          </DefaultButton>
+          <DefaultButton
             className={styles.interrupt}
             onClick={handleInterruptTask}
             aria-label='Interrupt current task'
             title='Interrupt current task'
-            type='button'
           >
             INTERRUPT
-          </button>
+          </DefaultButton>
         </div>
       )}
 
       {state.activeTask && !state.isRunning && (
-        <button
+        <DefaultButton
           className={styles.resume}
           onClick={handleStartOrResumeTask}
           aria-label='Resume task'
           title='Resume task'
-          type='button'
         >
           RESUME
-        </button>
+        </DefaultButton>
       )}
     </div>
   );

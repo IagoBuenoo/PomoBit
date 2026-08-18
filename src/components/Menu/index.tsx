@@ -2,6 +2,14 @@ import styles from './styles.module.css';
 import { useEffect, useState } from 'react';
 import { RouterLink } from '../RouterLink';
 
+import {
+  HouseIcon,
+  HistoryIcon,
+  SettingsIcon,
+  SunIcon,
+  MoonIcon,
+} from 'lucide-react';
+
 type AvailableThemes = 'dark' | 'light';
 
 export function Menu() {
@@ -13,8 +21,8 @@ export function Menu() {
   });
 
   const nextThemeIcon = {
-    dark: <img src='/sun.png' alt='' />,
-    light: <img src='/moon.png' alt='' />,
+    dark: <SunIcon />,
+    light: <MoonIcon />,
   };
 
   function handleTheme(e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) {
@@ -39,7 +47,7 @@ export function Menu() {
           title='Home'
           aria-label='Home'
         >
-          <img src='/home.png' alt='' />
+          <HouseIcon />
         </RouterLink>
         <RouterLink
           href='/history/'
@@ -47,7 +55,7 @@ export function Menu() {
           title='History'
           aria-label='History'
         >
-          <img src='/history.png' alt='' />
+          <HistoryIcon />
         </RouterLink>
         <RouterLink
           href='/settings/'
@@ -55,7 +63,7 @@ export function Menu() {
           title='Settings'
           aria-label='Settings'
         >
-          <img src='/settings.png' alt='' />
+          <SettingsIcon />
         </RouterLink>
         <a
           className={styles.themeButton}

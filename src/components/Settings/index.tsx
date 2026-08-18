@@ -6,6 +6,7 @@ import { DefaultInput } from '../DefaultInput';
 import styles from './styles.module.css';
 import { toast } from 'react-toastify';
 import { showMessage } from '../../adapters/showMessage';
+import { DefaultButton } from '../DefaultButton';
 
 export function Settings() {
   const { dispatch, state } = useTaskContext();
@@ -51,7 +52,7 @@ export function Settings() {
           <DefaultInput
             id='pomodoro'
             type='number'
-            min={5}
+            min={1}
             value={pomodoro}
             onChange={e => setPomodoro(Number(e.target.value))}
           >
@@ -61,7 +62,7 @@ export function Settings() {
           <DefaultInput
             id='shortBreak'
             type='number'
-            min={5}
+            min={1}
             value={shortBreak}
             onChange={e => setShortBreak(Number(e.target.value))}
           >
@@ -71,16 +72,16 @@ export function Settings() {
           <DefaultInput
             id='longBreak'
             type='number'
-            min={5}
+            min={1}
             value={longBreak}
             onChange={e => setLongBreak(Number(e.target.value))}
           >
             Long Break
           </DefaultInput>
 
-          <button className={styles.save} onClick={saveSettings}>
+          <DefaultButton className={styles.save} onClick={saveSettings}>
             SAVE
-          </button>
+          </DefaultButton>
         </div>
       </div>
     </>

@@ -7,67 +7,37 @@
   background: var(--primary);
   width: 64rem;
   max-width: 90%;
-  height: 44rem;
-  border-radius: 0;
-  border: 2px solid var(--border);
-  box-shadow: 2px 2px 0 var(--border);
+  height: 46rem;
+  border-radius: 0.8rem;
   transition: all 0.3s ease-in-out;
 }
 
 .containerButtons {
   display: flex;
-  gap: 4.8rem;
+  gap: 8rem;
 }
 
 .containerButton {
   font-family: inherit;
-  font-size: 1.2rem;
+  font-size: 1.8rem;
   background-color: transparent;
   color: inherit;
-  padding: 0.4rem;
   border: none;
   border-radius: 0;
   cursor: pointer;
   transition: font-size 0.1s ease-in-out;
-  word-spacing: -0.5em;
   white-space: nowrap;
-}
-
-.containerButton.disabled {
-  background-color: transparent;
-  color: inherit;
 }
 
 .active {
   border-bottom: 2px solid var(--background);
 }
 
-.active.disabled {
-  color: inherit;
-}
-
 .countdown {
-  font-size: 9.6rem;
+  font-size: 12rem;
   font-weight: bold;
-  margin: 7.4rem auto;
-  letter-spacing: -0.05em;
-  transition: font-size 0.1s ease-in-out;
-}
-
-.start,
-.pause,
-.resume,
-.interrupt {
-  font-family: inherit;
-  font-size: 1.8rem;
-  background-color: var(--button-color);
-  color: inherit;
-  padding: 1.2rem 3.6rem;
-  border-radius: 0;
-  border: 2px solid var(--border);
-  box-shadow: 2px 2px 0 var(--border);
-  cursor: pointer;
-  transition: font-size 0.3s ease-in-out;
+  margin: 7rem auto;
+  transition: all 0.3s ease-in-out;
 }
 
 .pauseInterrupt {
@@ -75,33 +45,19 @@
   gap: 1.6rem;
 }
 
-.start:hover,
-.pause:hover,
-.resume:hover,
-.interrupt:hover {
-  filter: brightness(95%);
-}
-
-.start:active,
-.pause:active,
-.resume:active,
-.interrupt:active {
-  transform: translate(2px, 2px);
-  box-shadow: none;
-}
-
 @media (max-width: 912px) {
   .container {
-    max-width: 44rem;
-    height: 38rem;
+    max-width: 50rem;
+    height: 40rem;
   }
 
   .containerButton {
-    font-size: 66.25%;
+    font-size: 85%;
   }
 
   .containerButtons {
-    gap: 3.4rem;
+    gap: 7.8rem;
+    font-size: 1.8rem;
   }
 
   .countdown {
@@ -112,6 +68,6 @@
   .pause,
   .resume,
   .interrupt {
-    font-size: 1.2rem;
+    font-size: rem;
   }
 }

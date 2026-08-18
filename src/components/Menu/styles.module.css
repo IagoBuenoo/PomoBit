@@ -3,8 +3,8 @@
   align-items: center;
   justify-content: center;
   gap: 1.6rem;
-  margin-bottom: 9.2rem;
-  margin-top: 5.6rem;
+  margin-bottom: 8rem;
+  margin-top: 6.4rem;
 }
 
 .menuLink {
@@ -14,11 +14,9 @@
   text-decoration: none;
   background: var(--primary);
   color: inherit;
-  padding: 1.2rem;
-  border: 2px solid var(--border);
-  box-shadow: 1.2px 1.2px 0 var(--border);
+  padding: 1.8rem;
   cursor: pointer;
-  border-radius: 0;
+  border-radius: 0.8rem;
   transition: background-color 0.1s ease-in-out;
 }
 
@@ -27,14 +25,7 @@
 }
 
 .menuLink:active {
-  transform: translate(2px, 2px);
-  box-shadow: none;
-}
-
-.menuLink img,
-.themeButton img {
-  width: 2.4rem;
-  height: 2.4rem;
+  transform: translate(1px, 1px);
 }
 
 .themeButton {
@@ -44,11 +35,9 @@
   text-decoration: none;
   background: var(--primary);
   color: inherit;
-  padding: 1.2rem;
-  border: 2px solid var(--border);
-  box-shadow: 1.2px 1.2px 0 var(--border);
+  padding: 1.8rem;
   cursor: pointer;
-  border-radius: 0;
+  border-radius: 0.8rem;
   transition: background-color 0.1s ease-in-out;
 }
 
@@ -57,12 +46,17 @@
 }
 
 .themeButton:active {
-  transform: translate(2px, 2px);
-  box-shadow: none;
+  transform: translate(1px, 1px);
 }
 
 @media (max-width: 912px) {
   .menu {
-    margin: 12rem auto;
+    margin: 6rem auto;
+  }
+
+  .menuLink,
+  .themeButton {
+    padding: 1.4rem;
+    transition: all 0.3s ease-in-out;
   }
 }

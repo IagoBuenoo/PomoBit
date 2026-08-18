@@ -8,9 +8,8 @@
   width: 64rem;
   max-width: 90%;
   height: 54rem;
-  border-radius: 0;
-  border: 2px solid var(--border);
-  box-shadow: 2px 2px 0 var(--border);
+  border-radius: 0.8rem;
+  border: none;
   transition: all 0.3s ease-in-out;
 }
 
@@ -24,36 +23,16 @@
 }
 
 .settings h2 {
-  margin: 1.2rem;
-  margin-top: 3.2rem;
+  margin-top: 1.2rem;
   font-size: 3.2rem;
 }
 
 .settings p {
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   white-space: nowrap;
   margin: 1.2rem auto;
 }
 
 .save {
-  font-family: inherit;
-  font-size: 1.8rem;
-  background-color: var(--button-color);
-  color: inherit;
-  padding: 1.2rem 3.6rem;
-  border-radius: 0;
-  border: 2px solid var(--border);
-  box-shadow: 1.2px 1.2px 0 var(--border);
-  cursor: pointer;
-  transition: font-size 0.3s ease-in-out;
-  margin: 3.2rem auto;
-}
-
-.save:active {
-  transform: translate(2px, 2px);
-  box-shadow: none;
-}
-
-.save:hover {
-  filter: brightness(80%);
+  margin: 2.4rem auto;
 }
